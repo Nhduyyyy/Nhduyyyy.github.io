@@ -1,0 +1,204 @@
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.itim-regular {
+    font-family: "Itim", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.Title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 100px;
+    font-weight: 500;
+    color: #FF5252;
+    text-shadow: 
+        0 0 8px rgba(255, 82, 82, 0.8),
+        0 0 12px rgba(255, 82, 82, 0.6),
+        0 0 16px rgba(200, 40, 40, 0.4);
+    transition: transform 0.5s ease, text-shadow 0.5s ease;
+}
+
+.Title:hover {
+    transform: scale(1.05);
+    text-shadow: 
+        0 0 10px rgba(255, 82, 82, 1),
+        0 0 18px rgba(255, 82, 82, 0.9),
+        0 0 25px rgba(200, 40, 40, 0.7);
+}
+
+
+.Text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.img {
+    width: 100%;
+    border: 3px solid rgba(255, 0, 0, 0.7); /* Viền đỏ với độ trong suốt */
+    border-radius: 15px; /* Bo tròn viền */
+    box-shadow: 
+        0 0 10px rgba(255, 0, 0, 0.8),    /* Hiệu ứng phát sáng gần viền */
+        0 0 20px rgba(255, 0, 0, 0.6),    /* Hiệu ứng phát sáng xa hơn */
+        0 0 30px rgba(255, 0, 0, 0.4);    /* Tăng chiều sâu cho ánh sáng */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động mượt */
+}
+
+.img:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi di chuột vào */
+    box-shadow: 
+        0 0 15px rgba(255, 0, 0, 0.9),
+        0 0 25px rgba(255, 0, 0, 0.7),
+        0 0 35px rgba(255, 0, 0, 0.5);
+}
+
+
+.dance{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 20px;
+}
+
+
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial, sans-serif';
+}
+
+.btn-show-message {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #FF4081;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 50px auto;
+    display: inline-block;
+    box-shadow: 0 8px 15px rgba(255, 64, 129, 0.3);
+}
+
+.btn-show-message:hover {
+    background-color: #E040FB;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(224, 64, 251, 0.4);
+}
+
+.message {
+    position: fixed;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 64, 129, 0.7);
+    white-space: nowrap;
+    animation: fly-up 7s ease-out forwards, fade-in 3s ease-in;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+}
+
+@keyframes fly-up {
+    to {
+        transform: translateY(-400px) rotate(10deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial, sans-serif';
+}
+
+.btn-show-message-fam {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #FF4081;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 50px auto;
+    display: inline-block;
+    box-shadow: 0 8px 15px rgba(255, 64, 129, 0.3);
+}
+
+.btn-show-message-fam:hover {
+    background-color: #E040FB;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(224, 64, 251, 0.4);
+}
+
+.messagesfam {
+    position: fixed;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 64, 129, 0.7);
+    white-space: nowrap;
+    animation: fly-up 7s ease-out forwards, fade-in 3s ease-in;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+}
+
+@keyframes fly-up {
+    to {
+        transform: translateY(-300px) rotate(10deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.text-ac{
+    font-size: 30px;
+    font-weight: 400;
+}
+
