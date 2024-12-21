@@ -187,5 +187,41 @@ document.querySelector('.btn-show-message-fam').addEventListener('click', () => 
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Thời gian chạy hiệu ứng (ms)
+  const duration = 12000;
+
+  // Xác định toạ độ bắt đầu & kết thúc
+  const startY = window.pageYOffset; // Thường = 0 khi mới mở trang
+  const endY = document.documentElement.scrollHeight - window.innerHeight;
+
+  // Biến lưu thời điểm bắt đầu
+  let startTime = null;
+
+  // Hàm chạy animation
+  function animateScroll(timestamp) {
+    // Lần đầu requestAnimationFrame được gọi, gán startTime
+    if (!startTime) {
+      startTime = timestamp;
+    }
+
+    // Tính đã chạy được bao lâu
+    const elapsed = timestamp - startTime;
+    // Tính tỉ lệ % đã đi (từ 0 đến 1)
+    const progress = Math.min(elapsed / duration, 1);
+
+    // Tính vị trí Y hiện tại
+    const currentY = startY + (endY - startY) * progress;
+    window.scrollTo(0, currentY);
+
+    // Tiếp tục gọi requestAnimationFrame cho đến khi progress = 1
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll);
+    }
+  }
+
+  // Gọi requestAnimationFrame lần đầu
+  requestAnimationFrame(animateScroll);
+});
 
 
